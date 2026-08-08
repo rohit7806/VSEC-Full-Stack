@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT RESULT</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <h3>Enter Student Details</h3>
+    <textarea id="student" placeholder="Please enter your name"></textarea>
+    <textarea id="Physics" placeholder="Please enter your marks for Physics"></textarea>
+    <textarea id="Chemistry" placeholder="Please enter your marks for Chemistry"></textarea>
+    <textarea id="Biology" placeholder="Please enter your marks for Biology"></textarea>
+    <button onclick="addStudent()">Submit</button>
+    <h3>Student Records</h3>
+     <h3 id="topperDisplay" style="color: green; margin-top: 20px;">Topper: No entries yet</h3>
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Physics</th>
+                <th>Chemistry</th>
+                <th>Biology</th>
+                <th>Total Marks</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="student.js">
+       
+    </script>
+</body>
+</html>

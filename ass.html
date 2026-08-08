@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+           <h2>Student Marks Details</h2>
+
+           <input type="text" id="name" placeholder="Enter Student Name"><br><br>
+           
+           <input type="number" id="English" placeholder="Enter English Marks"><br><br>
+            
+           <input type="number" id="Math" placeholder="Enter Math Marks"><br><br>
+        
+           <input type="number" id="Marathi" placeholder="Enter Marathi Marks"><br><br>
+           
+          <button onclick="calculate()">calculate</button>
+
+        <h3 id="result"></h3>
+
+        <script>
+              function calculate() {
+                let name = document.getElementById("name").value;
+
+                let English = document.getElementById("English").value;
+
+                let Math = document.getElementById("Math").value;
+
+                let Marathi = document.getElementById("Marathi").value;
+
+                let total = English + Math + Marathi;
+
+                let percentage = total / 3;
+
+                
+              }
+
+        </script>
+
+        </body>
+    </head>
+</html>

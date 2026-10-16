@@ -1,0 +1,70 @@
+// 1. Create or Use Database
+use("rohit_rajput");
+
+// 2. Insert One Document (Using your details)
+db.engineers.insertOne({
+    name: "Rohit",
+    age: 20,
+    city: "Nashik",
+    course: "IT",
+    marks: 88
+});
+
+// 3. Insert Many Documents (Using peer names)
+db.engineers.insertMany([
+    { name: "Harshal", age: 21, city: "Nashik", course: "IT", marks: 82 },
+    { name: "Kaushal", age: 20, city: "Pune", course: "CS", marks: 79 },
+    { name: "Sarvadny", age: 21, city: "Mumbai", course: "ENTC", marks: 74 },
+    { name: "Aditya", age: 19, city: "Nashik", course: "CS", marks: 85 }
+]);
+
+// 4. Display All Documents
+db.engineers.find({});
+
+// 5. Find Documents Using a Condition (Age strictly greater than 20)
+db.engineers.find({
+    age: { $gt: 20 }
+});
+
+// 6. Update One Document (Updating your marks)
+db.engineers.updateOne(
+    { name: "Rohit" },
+    { $set: { marks: 95 } }
+);
+
+// 7. Update Multiple Documents
+db.engineers.updateMany(
+    { course: "CS" },
+    { $set: { course: "Computer Science" } }
+);
+
+// 8. Delete One Document
+db.engineers.deleteOne({
+    name: "Sarvadny"
+});
+
+// 9. Delete Multiple Documents
+db.engineers.deleteMany({
+    city: "Pune"
+});
+
+// 10. Sort Documents (Ascending order by age)
+db.engineers.find({}).sort({ age: 1 });
+
+// 11. Display Selected Fields (Only showing name and marks)
+db.engineers.find(
+    {},
+    { _id: 0, name: 1, marks: 1 }
+);
+
+// 12. Count Documents
+db.engineers.countDocuments({});
+
+// 13. Limit Documents (Show only the first result)
+db.engineers.find({}).limit(1);
+
+// 14. Drop Collection
+db.engineers.drop();
+
+// 15. Drop Database
+db.dropDatabase();
